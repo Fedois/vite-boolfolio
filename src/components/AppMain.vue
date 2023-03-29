@@ -60,12 +60,12 @@ export default {
                 <div v-for="project in projects" class="col-12 col-sm-4 col-md-3">
                     <div class="my-card">
                         <h2>
-                         -> {{ project.title }}
+                            {{ project.title }}
                         </h2>
 
-                        <!-- <div>
-                            <img :src="project.full_img_path" alt="">
-                        </div> -->
+                        <div v-if="project.img_path">
+                            <img :src="project.img_path" alt="">
+                        </div>
                         <p>
                             {{ project.content }}
                         </p>
