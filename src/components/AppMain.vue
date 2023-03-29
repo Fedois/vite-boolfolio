@@ -69,6 +69,9 @@ export default {
                         <p>
                             {{ project.content }}
                         </p>
+                        <div>
+                            <h4>type:</h4> <span>{{ project.type ? project.type.name : '---' }}</span>
+                        </div>
                         <div v-if="project.technologies.length > 0">
                             <h4>
                                 Technologies:
@@ -93,5 +96,10 @@ img {
 .my-card{
     border: 1px solid black;
     margin: 10px 0;
+    padding: 20px;
+}
+h4{
+    margin-top: 5px;
+    display: inline-block;
 }
 </style>
