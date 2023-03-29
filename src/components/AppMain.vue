@@ -14,8 +14,8 @@ export default {
         this.getPosts();
     },
     methods: {
-        changePage(page) {
-            this.currentPage = page;
+        changePage(index) {
+            this.currentPage = index;
 
             this.getPosts();
         },
@@ -48,15 +48,6 @@ export default {
                 </div>
             </div>
             <div class="row mb-4">
-                <div class="col">
-                    <div v-for="i in lastPage" style="display: inline-block;">
-                        <button @click="changePage(i)">
-                            Pagina {{ i }}
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
                 <div v-for="project in projects" class="col-12 col-sm-4 col-md-3">
                     <div class="my-card">
                         <h2>
@@ -82,6 +73,16 @@ export default {
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <div v-for="i in lastPage" style="display: inline-block;">
+                        <button @click="changePage(i)">
+                            Pagina {{ i }}
+                        </button>
                     </div>
                 </div>
             </div>
