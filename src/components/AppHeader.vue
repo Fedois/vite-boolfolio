@@ -5,7 +5,16 @@ export default {
     name: "AppHeader",
     data() {
         return {
-           
+           linksNav: [
+            {
+                label: 'home',
+                active: false
+            },
+            {
+                label: 'boh',
+                active: false
+            }
+           ]
         };
     },
 };
@@ -13,8 +22,17 @@ export default {
 
 <template>
     <header>
-        <div class="container">
-            <h1>BOOLPRESS FRONTEND</h1>
+        <div class="container mb-4">
+            <h1 class="text-center">BOOLPRESS FRONTEND</h1>
+
+            <nav>
+                <ul>
+                    <li v-for="link in linksNav" class="d-inline-block me-3">
+                        <Router-link :to="{name: 'projects' }">{{ link.label }}</Router-link>
+                    </li>
+                </ul>
+                
+            </nav>
         </div>
     </header>
 </template>

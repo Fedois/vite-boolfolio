@@ -2,19 +2,19 @@
 import axios from 'axios';
 
 export default {
-    name: "AppFooter",
+    name: "AppSingleProj",
     data() {
         return {
-           
+            
         };
     },
 };
 </script>
 
 <template>
-    <footer>
-        <p class="text-center text-uppercase">footer</p>
-    </footer>
+    <main>
+        ciao
+    </main>
 </template>
 
 <style scoped>
