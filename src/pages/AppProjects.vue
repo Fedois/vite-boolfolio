@@ -50,12 +50,15 @@ export default {
                         <div v-if="project.img_path">
                             <img :src="project.img_path" alt="">
                         </div>
+                        
                         <p>
                             {{ project.content }}
                         </p>
+                        
                         <div>
                             <h4>type:</h4> <span>{{ project.type ? project.type.name : '---' }}</span>
                         </div>
+                        
                         <div v-if="project.technologies.length > 0">
                             <h4>
                                 Technologies:
@@ -65,6 +68,10 @@ export default {
                                     {{ tech.name }}
                                 </li>
                             </ul>
+                        </div>
+
+                        <div>
+                            <router-link :to="{name: 'project'}" class="btn btn-primary">visualizza</router-link>
                         </div>
                     </div>
                 </div>
