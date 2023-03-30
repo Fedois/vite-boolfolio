@@ -41,13 +41,6 @@ export default {
     <main>
         <div class="container">
             <div class="row mb-4">
-                <div class="col">
-                    <h1>
-                        Boolpress Frontend
-                    </h1>
-                </div>
-            </div>
-            <div class="row mb-4">
                 <div v-for="project in projects" class="col-12 col-sm-4 col-md-3">
                     <div class="my-card">
                         <h2>

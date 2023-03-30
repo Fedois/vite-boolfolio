@@ -13,7 +13,9 @@ export default {
 
 <template>
     <header>
-        ciao
+        <div class="container">
+            <h1>BOOLPRESS FRONTEND</h1>
+        </div>
     </header>
 </template>
 
