@@ -23,8 +23,15 @@ export default {
                 .then(response => {
                     console.log(response.data);
 
-                    this.project = response.data.project;
-                    // this.lastPage = response.data.projects.last_page;
+                    if(response.data.project){
+                        this.project = response.data.project;
+                    }
+                    else{
+                        this.$router.push({name: 'NotFound'});
+                    }
+                        
+ 
+                    
                 });
         }
     },
@@ -33,8 +40,8 @@ export default {
 
 <template>
     <main>
-        <div class="container">
-            <h2 v-if="project"> titolo:
+        <div class="container" v-if="project">
+            <h2> titolo:
                 {{ project.title }}
             </h2>
             
