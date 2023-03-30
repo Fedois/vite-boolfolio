@@ -11,15 +11,15 @@ export default {
         };
     },
     created() {
-        this.getPosts();
+        this.getProjects();
     },
     methods: {
         changePage(index) {
             this.currentPage = index;
 
-            this.getPosts();
+            this.getProjects();
         },
-        getPosts() {
+        getProjects() {
             axios
                 .get('http://127.0.0.1:8000/api/projects', {
                     params: {
@@ -71,7 +71,7 @@ export default {
                         </div>
 
                         <div>
-                            <router-link :to="{name: 'project'}" class="btn btn-primary">visualizza</router-link>
+                            <Router-link :to="{name: 'project', params: {slug: project.slug}}" class="btn btn-primary">visualizza</Router-link>
                         </div>
                     </div>
                 </div>
